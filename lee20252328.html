@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미래 교육 나침반: 학생을 위한 학습지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary-color: #0073b1; /* OECD Blue */
+            --secondary-color: #f0f8ff; /* Light Alice Blue */
+            --text-color: #333;
+            --header-bg-color: #ffffff;
+            --card-bg-color: #ffffff;
+            --accent-color: #2e8b57; /* Sea Green for positive accent */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--header-bg-color);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        section {
+            background-color: var(--card-bg-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 .fas {
+            margin-right: 15px;
+            font-size: 1.6rem;
+        }
+        
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .concept-card {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .concept-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px var(--shadow-color);
+            border-left-color: var(--primary-color);
+        }
+
+        .concept-card .fas {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .concept-card:hover .fas {
+            color: var(--primary-color);
+        }
+
+        .concept-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 115, 177, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #005a8a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 115, 177, 0.5);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+             body {
+                font-size: 15px;
+            }
+            .container {
+                padding: 10px;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>미래 교육 나침반 🧭</h1>
+        <p>OECD 보고서로 알아보는 미래의 선생님과 교육의 방향</p>
+    </header>
+
+    <div class="container">
+        <section id="intro">
+            <h2><i class="fas fa-rocket"></i> 왜 지금 '교수 나침반'이 중요할까요?</h2>
+            <p>세상은 인공지능(AI), 기후 변화 등 복잡한 문제들로 가득 차 있어요. 이런 미래를 살아갈 여러분에게는 창의력, 협업 능력, 회복탄력성 같은 힘이 필요합니다. 그리고 여러분을 이끌어 줄 선생님에게도 마찬가지로 새로운 힘이 필요하죠. '교수 나침반'은 바로 이런 미래의 선생님들을 위한 안내서입니다. 선생님이 행복하고 유능해야, 학생인 여러분도 더 크게 성장할 수 있기 때문이에요!</p>
+        </section>
+
+        <section id="anchor">
+            <h2><i class="fas fa-anchor"></i> 선생님의 마음을 잡아주는 '닻'</h2>
+            <p>거친 파도 속에서도 배를 고정해주는 '닻'처럼, 빠르게 변하는 세상 속에서 선생님의 중심을 잡아주는 3가지 요소가 있습니다.</p>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>존재하기 (Being)</h3>
+                    <p>선생님으로서의 정체성과 자부심을 갖고, 진정성 있는 모습으로 학생들을 대하는 것.</p>
+                </div>
+                <div class="concept-card">
+                    <i class="fas fa-users"></i>
+                    <h3>소속되기 (Belonging)</h3>
+                    <p>동료 선생님, 학생, 학부모와 끈끈한 유대감을 느끼며 안전한 학교 공동체의 일원이 되는 것.</p>
+                </div>
+                <div class="concept-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>성장하기 (Becoming)</h3>
+                    <p>끊임없이 배우고 성장하며, 새로운 지식과 기술을 받아들여 더 나은 교사로 발전하는 것.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="agency">
+            <h2><i class="fas fa-lightbulb"></i> 교육을 이끄는 힘, 선생님의 '주도성'</h2>
+            <p>'주도성'이란 선생님이 교육의 변화를 직접 만들어나가는 힘을 의미합니다. 단순히 주어진 것을 가르치는 것을 넘어, 더 나은 교육을 위해 스스로 고민하고 행동하는 것이죠.</p>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <i class="fas fa-user-astronaut"></i>
+                    <h3>개인의 주도성</h3>
+                    <p>선생님 한 명 한 명이 전문성을 바탕으로 최고의 수업을 만들어내는 힘.</p>
+                </div>
+                <div class="concept-card">
+                    <i class="fas fa-people-arrows"></i>
+                    <h3>협력적 주도성 (Co-agency)</h3>
+                    <p>학생, 동료, 심지어 AI와도 협력하며 함께 시너지를 내는 힘.</p>
+                </div>
+                <div class="concept-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>집단의 주도성</h3>
+                    <p>학교 전체의 선생님들이 하나의 팀처럼 힘을 합쳐 학교 문화를 바꾸는 힘.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="wellbeing">
+            <h2><i class="fas fa-heart-pulse"></i> 선생님의 '웰빙'이 중요한 이유</h2>
+            <p>선생님이 행복해야 학생도 행복합니다. 선생님의 웰빙은 좋은 교육을 위한 필수 조건이에요. 신체적, 정신적, 사회적으로 건강하고 안정감을 느낄 때, 학생들에게 더 긍정적인 에너지를 줄 수 있습니다.</p>
+             <div class="concept-grid">
+                <div class="concept-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>신체적 웰빙</h3>
+                    <p>건강한 근무 환경과 적절한 휴식.</p>
+                </div>
+                <div class="concept-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>정신적(인지적) 웰빙</h3>
+                    <p>지적인 호기심을 채우고, 전문가로서 존중받는 느낌.</p>
+                </div>
+                <div class="concept-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>사회·정서적 웰빙</h3>
+                    <p>동료들과의 공감, 신뢰, 협력을 통해 얻는 안정감.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="activity">
+            <h2><i class="fas fa-question-circle"></i> 함께 생각해봐요!</h2>
+            <p>미래 교육의 주인공은 바로 여러분과 선생님입니다. 아래 질문에 대해 생각해보고, 친구들이나 선생님과 이야기해보세요.</p>
+            <div class="btn-container">
+                <button class="btn" onclick="alert('예시: AI 튜터와 함께 어려운 수학 문제를 풀고, 선생님과는 토론 수업을 하고 싶어요!')">내가 꿈꾸는 미래 교실의 모습은?</button>
+                <button class="btn" onclick="alert('예시: 제가 모르는 것을 질문했을 때, 함께 해결책을 찾아봐 주시는 선생님이 멋져요.')">어떤 선생님이 '변화의 주인공'처럼 느껴지나요?</button>
+                <button class="btn" onclick="alert('예시: 선생님이 행복해 보이실 때, 저도 덩달아 기분이 좋아지고 수업에 더 집중하게 돼요!')">선생님의 행복이 나에게 어떤 영향을 미칠까요?</button>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2024 미래 교육 나침반 학습지 | Based on OECD Education Policy Perspectives No. 123</p>
+    </footer>
+
+</body>
+</html>
